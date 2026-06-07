@@ -8,10 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
+        :root {
+            --azul-oscuro: #0A1931;
+            --azul-claro: #B3CFE5;
+            --azul-principal: #4A7FA7;
+            --azul-medio: #1A3D63;
+            --blanco-suave: #F6FAFD;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-medio) 50%, var(--azul-oscuro) 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -22,7 +29,7 @@
             display: flex;
             max-width: 900px;
             width: 100%;
-            background: #fff;
+            background: var(--blanco-suave);
             border-radius: 24px;
             overflow: hidden;
             box-shadow: 0 25px 60px rgba(0,0,0,0.3);
@@ -35,7 +42,7 @@
         }
         .login-right {
             flex: 1;
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, var(--azul-principal) 0%, var(--azul-medio) 100%);
             padding: 48px 40px;
             display: flex;
             flex-direction: column;
@@ -82,30 +89,30 @@
             gap: 10px;
             margin-bottom: 40px;
         }
-        .brand i { font-size: 28px; color: #6366f1; }
-        .brand h1 { font-size: 22px; font-weight: 700; color: #1e293b; }
-        .brand h1 span { color: #6366f1; }
-        .login-left h3 { font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 8px; }
-        .login-left .sub { font-size: 14px; color: #64748b; margin-bottom: 32px; }
+        .brand i { font-size: 28px; color: var(--azul-principal); }
+        .brand h1 { font-size: 22px; font-weight: 700; color: var(--azul-oscuro); }
+        .brand h1 span { color: var(--azul-principal); }
+        .login-left h3 { font-size: 24px; font-weight: 700; color: var(--azul-oscuro); margin-bottom: 8px; }
+        .login-left .sub { font-size: 14px; color: var(--azul-principal); margin-bottom: 32px; opacity: 0.7; }
         .form-group { margin-bottom: 20px; }
         .form-group label {
             display: block;
             font-size: 13px;
             font-weight: 600;
-            color: #475569;
+            color: var(--azul-medio);
             margin-bottom: 6px;
         }
         .form-group .input-wrapper {
             display: flex;
             align-items: center;
-            border: 1.5px solid #e2e8f0;
+            border: 1.5px solid var(--azul-claro);
             border-radius: 12px;
             padding: 0 16px;
             transition: border-color 0.2s;
-            background: #f8fafc;
+            background: #fff;
         }
         .form-group .input-wrapper:focus-within {
-            border-color: #6366f1;
+            border-color: var(--azul-principal);
             background: #fff;
         }
         .form-group .input-wrapper i {
@@ -120,7 +127,7 @@
             font-size: 14px;
             outline: none;
             font-family: 'Inter', sans-serif;
-            color: #1e293b;
+            color: var(--azul-oscuro);
         }
         .form-options {
             display: flex;
@@ -133,13 +140,13 @@
             align-items: center;
             gap: 8px;
             font-size: 13px;
-            color: #64748b;
+            color: var(--azul-medio);
             cursor: pointer;
         }
-        .form-options label input { accent-color: #6366f1; }
+        .form-options label input { accent-color: var(--azul-principal); }
         .form-options a {
             font-size: 13px;
-            color: #6366f1;
+            color: var(--azul-principal);
             text-decoration: none;
             font-weight: 500;
         }
@@ -147,7 +154,7 @@
         .btn-login {
             width: 100%;
             padding: 14px;
-            background: #6366f1;
+            background: var(--azul-principal);
             color: #fff;
             border: none;
             border-radius: 12px;
@@ -157,7 +164,7 @@
             transition: all 0.2s;
             font-family: 'Inter', sans-serif;
         }
-        .btn-login:hover { background: #4f46e5; transform: translateY(-1px); }
+        .btn-login:hover { background: var(--azul-medio); transform: translateY(-1px); }
         .btn-login:active { transform: translateY(0); }
         .error-msg {
             color: #dc2626;
